@@ -68,6 +68,16 @@ curl -X POST -H 'Content-Type: application/json' \
      -d '{"title":"buy milk","priority":"high"}' \
      http://localhost:8080/tasks
 # {"id":1,"title":"buy milk","priority":"high"}
+
+# --- Powershell
+Invoke-RestMethod `
+  -Method Post `
+  -Uri "http://localhost:8080/tasks" `
+  -ContentType "application/json" `
+  -Body '{"title":"buy milk","priority":"high"}'
+# --- Powershell
+
+
 curl http://localhost:8080/tasks
 docker compose down
 ```
